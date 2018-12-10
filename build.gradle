@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'apache.ignite.warmup'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+def igniteVersion = '2.6.0'
+
+dependencies {
+    compile group: 'org.apache.ignite', name: 'ignite-core', version: igniteVersion
+
+    runtime group: 'org.apache.ignite', name: 'ignite-spring', version: igniteVersion
+    runtime group: 'org.apache.ignite', name: 'ignite-rest-http', version: igniteVersion
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
